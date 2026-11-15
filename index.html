@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0f19">
+  <meta name="description" content="OWASP Top 10:2025 — Presentación profesional con fondo de video visible, temas claro/oscuro y riesgos de seguridad web.">
+  <title>OWASP Top 10:2025 — Presentación Rediseñada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Fira+Code:wght@400;500;600&family=Montserrat:wght@400;700;900&family=Space+Grotesk:wght@400;700&family=Poppins:wght@400;700;900&family=Syne:wght@400;800&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <link rel="stylesheet" href="css/rediseño.css">
+</head>
+<body>
+  <a class="skip-link" href="#presentation">Saltar a la presentación</a>
+
+  <!-- Fondo de video a pantalla completa -->
+  <video class="bg-video" autoplay muted loop playsinline aria-hidden="true">
+    <source src="VideoFondoHacker.mp4" type="video/mp4">
+    Tu navegador no soporta video.
+  </video>
+  <div class="bg-overlay"></div>
+
+  <!-- Barra superior -->
+  <header class="topbar" aria-label="Barra superior">
+    <div class="brand">
+      <span class="brand-mark"><i class="ph ph-shield-check"></i></span>
+      <span>OWASP <span class="brand-muted">TOP 10</span><span class="brand-year">· 2025</span></span>
+    </div>
+    <div class="topbar-center"><span class="live-dot"></span> ADSO <span class="topbar-divider">/</span> 3410390</div>
+    <div class="top-actions">
+      <button class="icon-btn" id="themeToggle" aria-label="Cambiar tema claro/oscuro" title="Tema"><i class="ph ph-moon"></i></button>
+      <button class="icon-btn" id="tocToggle" aria-label="Abrir índice" aria-expanded="false" title="Índice (I)"><i class="ph ph-list"></i></button>
+      <button class="icon-btn" id="fullscreenBtn" aria-label="Pantalla completa" title="Pantalla completa"><i class="ph ph-corners-out"></i></button>
+    </div>
+  </header>
+
+  <!-- Barra de progreso debajo del panel superior -->
+  <div class="progress-bar-container">
+    <div class="progress-wrap" role="progressbar" aria-label="Progreso de la presentación" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1" id="progressTrack">
+      <span id="progressFill"></span>
+    </div>
+  </div>
+
+  <!-- Navegación lateral -->
+  <aside class="nav-side" id="navSide" aria-label="Navegación de diapositivas" hidden>
+    <div class="nav-head">
+      <span class="eyebrow">CONTENIDO</span>
+      <h2>Diapositivas</h2>
+      <button class="icon-btn" id="navClose" aria-label="Cerrar navegación"><i class="ph ph-x"></i></button>
+    </div>
+    <nav id="navList"></nav>
+  </aside>
+
+  <main id="presentation" tabindex="-1">
+    <div class="presentation-meta">
+      <span id="sectionLabel">INICIO</span>
+      <span class="meta-divider">·</span>
+      <span id="slideCounter">01 <span class="slash">/</span> 10</span>
+    </div>
+
+    <div class="slide-stage" id="slideStage" aria-live="polite" aria-atomic="true"></div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript><div class="noscript">Esta presentación necesita JavaScript para mostrar y navegar las diapositivas.</div></noscript>
+
+  <script defer src="js/slides-data.js"></script>
+  <script defer src="js/app.js"></script>
+</body>
+</html>
