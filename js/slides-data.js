@@ -206,7 +206,7 @@ const SLIDES = [
     lead: "Los controles funcionan mejor cuando se diseñan y verifican durante todo el ciclo de vida, no cuando el producto ya está en producción.",
     items: [
       ["01", "Requisitos", "Identificar activos, datos sensibles y obligaciones."],
-      ["02", "Arquitectura", "Modelar amenazas y definir límites de confianza."],
+      ["02", "Arquitectura", "Modelar amenazas, definir límites de confianza y establecer controles antes de programar."],
       ["03", "Desarrollo", "Aplicar patrones seguros y revisar cambios."],
       ["04", "Pruebas", "Analizar código, dependencias y comportamiento."],
       ["05", "Operación", "Monitorear, responder y corregir incidentes."]
@@ -228,8 +228,9 @@ const SLIDES = [
     ],
     sources: [
       ["OWASP Top 10:2025 — Español", "https://top10.owasp.org/2025/es/"],
-      ["Introducción y metodología 2025", "https://top10.owasp.org/2025/es/0x00_2025-Introduction/"],
-      ["OWASP Foundation — About", "https://owasp.org/about"]
+      ["Metodología y selección de riesgos 2025", "https://top10.owasp.org/2025/es/0x00_2025-Introduction/"],
+      ["Acerca de OWASP — misión y recursos", "https://top10.owasp.org/2025/es/0x01_2025-About_OWASP/"],
+      ["OWASP Top 10 — reconocimiento como estándar de concienciación", "https://owasp.org/www-project-top-ten/"]
     ],
     note: "IDEA CLAVE: no preguntes si cumples una lista; pregunta qué riesgo existe en cada flujo y qué control lo reduce."
   }
