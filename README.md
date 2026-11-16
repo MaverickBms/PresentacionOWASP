@@ -1,98 +1,47 @@
-# OWASP Top 10:2025 — Presentación Rediseñada "Spectra Pro"
+# OWASP Top 10:2025 — Presentación web
 
-Presentación web interactiva en español sobre los 10 riesgos de OWASP Top 10:2025, con fondo de video visible, temas claro/oscuro y texto en negrita para mejor legibilidad.
+Presentación interactiva en español sobre las diez categorías de riesgo de **OWASP Top 10:2025**. Incluye fondo de video, temas claro/oscuro, navegación por teclado y gestos táctiles, índice lateral y diseño adaptable.
 
-## 🎨 Mejoras clave
+## Funciones
 
-| Aspecto | Antes | Después |
-|---------|-------|---------|
-| Fondo de video | Overlay oscuro que ocultaba el video | Overlay sutil que deja ver el video claramente |
-| Contenido | Bloque grande que encerraba todo y tapaba el fondo | Sin contenedor que tape el video, tarjetas glass translúcidas |
-| Barra de progreso | Abajo, en controles | Arriba, debajo del panel superior (OWASP + menú + pantalla completa) |
-| Tema | Solo oscuro | Tema claro y oscuro (con toggle y memoria en localStorage) |
-| Controles de navegación | Botones Anterior/Siguiente, flechas, hints de teclado | Eliminados por diseño (navegación silenciosa por teclado y touch) |
-| Tipografía | Inter + JetBrains Mono | Montserrat, Space Grotesk, Poppins, Syne, Inter, Plus Jakarta Sans, JetBrains Mono, Fira Code |
-| Tamaño de texto | Tamaños estándar | Tamaños aumentados en todos los elementos |
-| Texto | Podía ocultarse con el fondo | Contraste reforzado, text-shadow en ambos temas |
+- 10 diapositivas: portada, contexto, mapa de riesgos, cinco bloques de riesgos, ciclo de vida y cierre.
+- Desplazamiento vertical dentro de cada diapositiva cuando el contenido supera la altura disponible.
+- Navegación horizontal por gestos táctiles, sin interferir con el scroll vertical.
+- Teclas `←` y `→` o `PageUp` y `PageDown` para cambiar de diapositiva.
+- Teclas `Home` y `End` para ir al inicio y al final.
+- Tecla `I` para abrir o cerrar el índice.
+- Selector de tema claro/oscuro con preferencia guardada en el navegador.
+- Modo de pantalla completa.
+- Diseño responsive para escritorio, tablet y móvil.
 
-## 🌓 Temas claro y oscuro
-
-- Hay un botón de toggle en la barra superior (icono sol/luna) para cambiar entre tema claro y oscuro.
-- La preferencia se guarda en `localStorage` y se recuerda al recargar.
-- También respeta la preferencia del sistema (`prefers-color-scheme`).
-
-## 📱 Responsive
-
-La presentación se adapta a cualquier pantalla:
-
-- **Desktop (≥1024px)**: Diseño completo con dos columnas en secciones de riesgos
-- **Tablet (640px–1024px)**: Tarjetas de riesgos en una columna, mapa en 3 columnas
-- **Móvil (<640px)**: Todo en una sola columna, texto con tamaños legibles, navegación lateral de ancho completo
-
-## 📁 Estructura
+## Estructura
 
 ```
-owasp_rediseño_2025/
+.
 ├── index.html
-├── VideoFondoHacker.mp4          ← fondo de video (visible, no oculto)
+├── VideoFondoHacker.mp4
 ├── README.md
 ├── css/
-│   └── rediseño.css              ← estilos glassmorphism + temas claro/oscuro + responsive
+│   └── rediseño.css
 └── js/
-    ├── app.js                    ← motor de renderizado, navegación y toggle de tema
-    └── slides-data.js            ← contenido de las 10 diapositivas
+    ├── app.js
+    └── slides-data.js
 ```
 
-## ▶️ Abrir
+## Ejecutar localmente
 
-1. Abre `owasp_rediseño_2025/index.html` en un navegador moderno.
-2. Navega con `←` y `→`, usa `I` para abrir/cerrar el panel lateral, `Home` y `End` para ir al principio/final.
-3. Cambia de tema con el botón de sol/luna en la barra superior.
-4. Usa el botón de pantalla completa para presentar.
+No requiere instalación ni proceso de compilación. Clona el repositorio y abre `index.html` en un navegador moderno. Para evitar restricciones del navegador con recursos locales, también puedes servir la carpeta con un servidor estático, por ejemplo:
 
-No requiere instalación ni servidor. Google Fonts y Phosphor Icons se cargan desde CDN.
+```bash
+python -m http.server 8000
+```
 
-## 📑 Las 10 diapositivas
+Luego visita `http://localhost:8000`.
 
-1. **Portada** — La superficie de ataque
-2. **Contexto** — OWASP: marco y propósito
-3. **Mapa de amenazas** — Las 10 categorías A01–A10
-4. **Bloque 01** — A01 + A02 (control de acceso + configuración)
-5. **Bloque 02** — A03 + A04 (cadena de suministro + criptografía)
-6. **Bloque 03** — A05 + A06 (inyección + diseño inseguro)
-7. **Bloque 04** — A07 + A08 (autenticación + integridad)
-8. **Bloque 05** — A09 + A10 (monitoreo + condiciones excepcionales)
-9. **Ciclo de vida** — DevSecOps: 5 fases
-10. **Cierre** — Defensa en profundidad y fuentes
+Google Fonts y Phosphor Icons se cargan desde sus respectivos CDN. El video de fondo debe permanecer en la raíz con el nombre `VideoFondoHacker.mp4`.
 
-## 🎥 Fondo de video
+## Fuentes
 
-El archivo `VideoFondoHacker.mp4` se reproduce como fondo a pantalla completa (`object-fit: cover`, silenciado, bucle infinito). El overlay es **sutil y semi-transparente** para que el video se aprecie sin que interfiera con la legibilidad del texto.
-
-## 🔤 Tipografías utilizadas
-
-### Títulos impactantes
-- **Montserrat** (ExtraBold / Black) — Títulos principales (h1)
-- **Space Grotesk** (Bold) — Subtítulos (h2)
-- **Poppins** (Bold / ExtraBold) — Títulos de sección (h3)
-- **Syne** (ExtraBold) — Títulos alternativos
-
-### Textos y puntos clave
-- **Inter** (SemiBold / Bold) — Párrafos y cuerpo de texto
-- **Plus Jakarta Sans** (Bold) — Etiquetas, kickers, badges
-
-### Detalle y código
-- **JetBrains Mono** — Códigos de riesgo, elementos mono
-- **Fira Code** — Números y elementos de detalle
-
-## 📖 Fuentes principales (OWASP)
-
-- https://top10.owasp.org/2025/es/
-- https://top10.owasp.org/2025/es/0x00_2025-Introduction/
-- https://owasp.org/about
-
-## Cómo abrir
-
-1. Abre `index.html` con un navegador moderno (Chrome, Firefox o Edge).
-2. Usa las flechas izquierda/derecha para cambiar de diapositiva.
-3. Pulsa `I` para abrir el índice y el botón de pantalla completa para presentar.
+- [OWASP Top 10:2025 — Español](https://top10.owasp.org/2025/es/)
+- [Introducción y metodología 2025](https://top10.owasp.org/2025/es/0x00_2025-Introduction/)
+- [OWASP Foundation — About](https://owasp.org/about)
