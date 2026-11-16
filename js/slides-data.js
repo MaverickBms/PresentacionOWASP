@@ -17,13 +17,14 @@ const SLIDES = [
     type: "overview",
     kicker: "01 / EL MARCO",
     title: "OWASP: conocimiento abierto.<br><em>Seguridad aplicable.</em>",
-    lead: "OWASP es una comunidad global que impulsa la seguridad del software mediante proyectos, investigación, herramientas y formación abierta.",
+    lead: "OWASP es una comunidad global y abierta para impulsar software confiable. El proyecto nació en 2001 y la Fundación OWASP se constituyó como entidad sin ánimo de lucro en 2004.",
     cards: [
-      ["01", "COMUNIDAD", "Colaboración global, neutral y abierta.", "ph ph-users-three", "cyan"],
-      ["02", "TOP 10", "Documento de concienciación sobre riesgos web prioritarios.", "ph ph-shield-warning", "amber"],
-      ["03", "PROPÓSITO", "Un lenguaje común para orientar decisiones de seguridad.", "ph ph-target", "violet"]
+      ["01", "ORIGEN", "OWASP comenzó el 1 de diciembre de 2001 como iniciativa abierta para mejorar la seguridad del software.", "ph ph-calendar-check", "cyan"],
+      ["02", "FUNDACIÓN Y MISIÓN", "En 2004 se constituyó la Fundación OWASP, sin ánimo de lucro. Su misión es impulsar software seguro globalmente mediante educación, herramientas y colaboración.", "ph ph-globe", "violet"],
+      ["03", "TOP 10", "Documento de concienciación que reúne diez categorías de riesgos críticos para aplicaciones web y orienta a los equipos de desarrollo.", "ph ph-shield-warning", "amber"],
+      ["04", "¿POR QUÉ ES REFERENTE?", "Se basa en datos aportados por la industria y la experiencia de la comunidad. Es abierto, gratuito y reconocido internacionalmente como punto de partida para mejorar el desarrollo seguro.", "ph ph-target", "cyan"]
     ],
-    note: "El Top 10 es una guía de concienciación: no sustituye un análisis de riesgos ni garantiza que una aplicación sea segura."
+    note: "La edición 2025 combina datos de pruebas de aplicaciones y una encuesta comunitaria: los datos ayudan a medir riesgos conocidos y la comunidad señala riesgos emergentes o difíciles de medir. Es una guía de concienciación, no una certificación ni una garantía de seguridad."
   },
   {
     id: "mapa",
