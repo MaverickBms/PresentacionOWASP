@@ -1200,3 +1200,64 @@ html.light-theme .noscript{background:var(--bg);color:var(--text)}
   *,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .bg-video{display:none}
 }
+
+/* ==========================================================================
+   DESPLAZAMIENTO Y ALTURAS RESPONSIVE
+   El encabezado permanece fijo y el contenido de cada diapositiva puede
+   desplazarse verticalmente cuando no cabe en el viewport.
+   ========================================================================== */
+main {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  padding-bottom: clamp(18px, 3vh, 36px);
+}
+
+.slide-stage {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y pinch-zoom;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+  padding: 10px 4px 24px;
+}
+
+.slide-stage:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 18px;
+  }
+
+  .slide-stage {
+    padding: 8px 2px 24px;
+  }
+
+  .cover {
+    padding: 28px 12px;
+    gap: 18px;
+  }
+
+  .cover-bottom {
+    padding-bottom: 8px;
+  }
+}
+
+@media (max-height: 760px) {
+  main {
+    padding-bottom: 16px;
+  }
+
+  .slide-stage {
+    padding-bottom: 20px;
+  }
+}
