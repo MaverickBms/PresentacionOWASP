@@ -351,10 +351,24 @@ document.addEventListener("keydown", (e) => {
 });
 
 let touchStartX = 0;
-stage.addEventListener("touchstart", (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+let touchStartY = 0;
+
+stage.addEventListener("touchstart", (e) => {
+  const touch = e.changedTouches[0];
+  touchStartX = touch.screenX;
+  touchStartY = touch.screenY;
+}, { passive: true });
+
 stage.addEventListener("touchend", (e) => {
-  const delta = e.changedTouches[0].screenX - touchStartX;
-  if (Math.abs(delta) > 70) render(current + (delta < 0 ? 1 : -1));
+  const touch = e.changedTouches[0];
+  const deltaX = touch.screenX - touchStartX;
+  const deltaY = touch.screenY - touchStartY;
+
+  // Solo cambia de diapositiva con un gesto claramente horizontal.
+  // Los gestos verticales quedan reservados al desplazamiento del contenido.
+  if (Math.abs(deltaX) > 70 && Math.abs(deltaX) > Math.abs(deltaY) * 1.2) {
+    render(current + (deltaX < 0 ? 1 : -1));
+  }
 }, { passive: true });
 
 /* Inicialización */
