@@ -1261,3 +1261,242 @@ main {
     padding-bottom: 20px;
   }
 }
+
+
+/* ==========================================================================
+   MODO CLARO — PALETA Y CONTRASTE UNIFICADOS
+   Corrige colores heredados del tema oscuro en todas las diapositivas.
+   ========================================================================== */
+html.light-theme {
+  color-scheme: light;
+  --bg: #f1f5f9;
+  --surface: #f8fafc;
+  --text: #172033;
+  --muted: #475569;
+  --text-inverse: #ffffff;
+  --panel: rgba(255, 255, 255, 0.82);
+  --panel-strong: rgba(255, 255, 255, 0.94);
+  --panel-border: rgba(71, 85, 105, 0.22);
+  --panel-hover: rgba(15, 23, 42, 0.06);
+  --accent: #6d28d9;
+  --accent2: #a21caf;
+  --accent3: #0e7490;
+  --accent-glow: rgba(109, 40, 217, 0.16);
+}
+
+html.light-theme body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+html.light-theme .bg-overlay {
+  background:
+    radial-gradient(circle at 50% 50%, rgba(248, 250, 252, 0.72) 0%, rgba(241, 245, 249, 0.82) 55%, rgba(226, 232, 240, 0.88) 100%),
+    linear-gradient(135deg, rgba(109, 40, 217, 0.035), transparent 55%);
+}
+
+html.light-theme .topbar {
+  background: rgba(248, 250, 252, 0.92);
+  color: var(--text);
+  border-bottom-color: var(--panel-border);
+}
+
+html.light-theme .brand,
+html.light-theme .topbar-center,
+html.light-theme .presentation-meta,
+html.light-theme .cover-hint,
+html.light-theme .nav-head h2 {
+  color: var(--text);
+}
+
+html.light-theme .topbar-divider,
+html.light-theme .meta-divider {
+  color: #64748b;
+}
+
+html.light-theme .icon-btn {
+  color: #334155;
+  background: rgba(255, 255, 255, 0.96);
+  border-color: #cbd5e1;
+}
+
+html.light-theme #slideCounter {
+  color: #172033;
+}
+
+html.light-theme #slideCounter .slash {
+  color: #64748b;
+}
+
+html.light-theme .slide h2,
+html.light-theme .slide h3,
+html.light-theme .risk-name,
+html.light-theme .overview-card h3,
+html.light-theme .phase h3,
+html.light-theme .conclusion-card h3 {
+  color: #172033;
+  text-shadow: none;
+}
+
+html.light-theme .slide p,
+html.light-theme .slide .lead,
+html.light-theme .cover-sub,
+html.light-theme .overview-card p,
+html.light-theme .risk-summary,
+html.light-theme .risk-block p,
+html.light-theme .risk-badge .name,
+html.light-theme .phase p,
+html.light-theme .source-item,
+html.light-theme .final-note {
+  color: #334155;
+  text-shadow: none;
+}
+
+html.light-theme .kicker,
+html.light-theme .risk-code,
+html.light-theme .risk-code2,
+html.light-theme .risk-code3,
+html.light-theme .risk-badge .code,
+html.light-theme .risk-block .block-label,
+html.light-theme .conclusion-card span,
+html.light-theme .source-item a {
+  color: #6d28d9;
+  text-shadow: none;
+}
+
+html.light-theme .risk-index,
+html.light-theme .risk-english,
+html.light-theme .overview-card .num,
+html.light-theme .phase .num,
+html.light-theme .nav-item .num,
+html.light-theme .nav-item .sec {
+  color: #64748b;
+}
+
+html.light-theme .glass-card,
+html.light-theme .overview-card,
+html.light-theme .risk-badge,
+html.light-theme .conclusion-card {
+  background: rgba(255, 255, 255, 0.94);
+  border-color: #d5deea;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.07);
+}
+
+html.light-theme .risk-panel {
+  background: linear-gradient(160deg, #ffffff, #f1f5f9);
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.07);
+}
+
+html.light-theme .risk-block {
+  background: #f8fafc;
+  border-color: #dbe3ed;
+}
+
+html.light-theme .risk-block.accented {
+  background: #f5f3ff;
+  border-color: #ddd6fe;
+}
+
+html.light-theme .risk-block.accented2 {
+  background: #fdf4ff;
+  border-color: #f5d0fe;
+}
+
+html.light-theme .risk-block.accented3 {
+  background: #ecfeff;
+  border-color: #a5f3fc;
+}
+
+html.light-theme .risk-signal {
+  color: #991b1b;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+html.light-theme .phase {
+  background: #ffffff;
+  border-color: #d5deea;
+}
+
+html.light-theme .phase .num {
+  background: #ede9fe;
+  color: #6d28d9;
+  box-shadow: none;
+}
+
+html.light-theme .source-list {
+  background: #ffffff;
+  border-color: #d5deea;
+}
+
+html.light-theme .source-item {
+  border-bottom-color: #e2e8f0;
+}
+
+html.light-theme .source-item a {
+  color: #075985;
+  text-decoration-color: #0e7490;
+  font-weight: 700;
+}
+
+html.light-theme .tag {
+  color: #334155;
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+html.light-theme .cover-badge {
+  color: #5b21b6;
+  background: #ede9fe;
+  border-color: #c4b5fd;
+  text-shadow: none;
+}
+
+html.light-theme .cover-hint kbd {
+  color: #5b21b6;
+  background: #ede9fe;
+  border-color: #c4b5fd;
+  text-shadow: none;
+}
+
+html.light-theme .nav-side {
+  background: rgba(248, 250, 252, 0.98);
+  color: var(--text);
+}
+
+html.light-theme .nav-item {
+  color: #334155;
+  background: #f1f5f9;
+}
+
+html.light-theme .nav-item:hover,
+html.light-theme .nav-item[aria-current="true"] {
+  color: #312e81;
+  background: #ede9fe;
+}
+
+html.light-theme .nav-item[aria-current="true"] .sec {
+  color: #0e7490;
+}
+
+html.light-theme .final-note {
+  color: #334155;
+  background: #f5f3ff;
+  border-color: #c4b5fd;
+}
+
+html.light-theme .progress-bar-container {
+  background: #e2e8f0;
+  border-bottom-color: #cbd5e1;
+}
+
+html.light-theme .toast {
+  background: #172033;
+  color: #f8fafc;
+  border-color: #a78bfa;
+}
+
+html.light-theme .skip-link {
+  color: #ffffff;
+}
